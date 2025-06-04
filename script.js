@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Tu paciencia infinita (especialmente conmigo 😉).",
         "Lo bien que hueles siempre.",
         "Nuestros abrazos que curan todo.",
-        "Tu pasión por [hobby o interés de Camille].", // Personaliza esto
         "Simplemente, tu existencia hace mi mundo mejor."
     ];
     let reasonsAdded = 0;
