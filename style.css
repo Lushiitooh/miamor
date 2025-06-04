@@ -1,0 +1,245 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdee9 0%, #b5eaff 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden; /* Para evitar scroll horizontal por los capibaras */
+}
+
+header {
+    background-color: rgba(255, 105, 180, 0.8); /* Rosa fuerte semi-transparente */
+    color: white;
+    padding: 2em 1em;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.heart-icon {
+    color: #ff4757;
+    animation: pulse 1.5s infinite;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+}
+
+section h2 {
+    font-family: 'Pacifico', cursive;
+    color: #e91e63; /* Un rosa más intenso */
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+button {
+    background-color: #ff69b4; /* Rosa */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff1493; /* Rosa más oscuro */
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#love-letter-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff0f5; /* Lavanda blush */
+    border-left: 5px solid #ff69b4;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+#razones-te-amo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#razones-te-amo li {
+    background-color: #f8bbd0; /* Rosa claro */
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+#razones-te-amo li:hover {
+    transform: translateX(10px) scale(1.02);
+    background-color: #f48fb1; /* Un poco más oscuro al pasar el mouse */
+}
+
+
+.capybara-icon-title {
+    width: 40px; /* Ajusta el tamaño según tu imagen */
+    vertical-align: middle;
+}
+
+.capybara-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.capybara-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Círculos */
+    border: 4px solid #ffc107; /* Amarillo capibara */
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255,193,7,0.5);
+    transition: transform 0.3s ease;
+}
+.capybara-img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.interactive-text {
+    cursor: pointer;
+    color: #007bff; /* Azul para indicar interactividad */
+    text-decoration: underline;
+    margin-top: 15px;
+}
+.interactive-text:hover {
+    color: #0056b3;
+}
+
+#interactive-heart-container {
+    margin-top: 20px;
+}
+
+#interactive-heart {
+    font-size: 4em;
+    cursor: pointer;
+    display: inline-block; /* Para que pulse bien */
+    transition: transform 0.2s ease;
+}
+#interactive-heart:hover {
+    transform: scale(1.2);
+}
+
+.heart-pulse {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Capibaras paseando */
+.walking-capybara {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 10px;
+    width: 80px; /* Ajusta el tamaño */
+    height: auto;
+    z-index: 1000; /* Encima de todo */
+    animation: walkAcross 20s linear infinite;
+}
+
+#capybara1 {
+    left: -100px; /* Empieza fuera de la pantalla a la izquierda */
+    animation-delay: 0s;
+}
+
+#capybara2 {
+    left: -100px; /* Empieza fuera de la pantalla a la izquierda */
+    bottom: 50px; /* Un poco más arriba */
+    width: 60px;
+    animation-delay: 7s; /* Que aparezca más tarde */
+    animation-duration: 25s; /* Que vaya más lento */
+}
+
+
+@keyframes walkAcross {
+    0% {
+        transform: translateX(0px) scaleX(1); /* scaleX(1) mira a la derecha */
+    }
+    49% {
+        transform: translateX(calc(100vw + 80px)) scaleX(1); /* Cruza a la derecha */
+    }
+    50% {
+        transform: translateX(calc(100vw + 80px)) scaleX(-1); /* Gira a la izquierda */
+    }
+    99% {
+        transform: translateX(0px) scaleX(-1); /* Cruza de vuelta a la izquierda */
+    }
+    100% {
+        transform: translateX(0px) scaleX(1); /* Gira a la derecha para el nuevo ciclo */
+    }
+}
+
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
+    section {
+        padding: 15px;
+    }
+    .capybara-img {
+        width: 100px;
+        height: 100px;
+    }
+    .walking-capybara {
+        width: 50px;
+    }
+}
